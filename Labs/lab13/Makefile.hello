@@ -1,0 +1,8 @@
+hello_driver: hello_driver.o hello_util.o
+	g++ -Wall -o hello_driver hello_driver.o hello_util.o
+
+hello_driver.o: hello_driver.cpp hello_util.h
+	g++ -Wall -ansi -c hello_driver.cpp
+
+hello_util.o: hello_util.cpp hello_util.h
+	g++ -Wall -ansi -c hello_util.cpp
